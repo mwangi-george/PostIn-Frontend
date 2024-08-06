@@ -56,7 +56,7 @@ def signup_default() -> rx.Component:
                 ),
                 rx.input(
                     id="user__name_signup",
-                    placeholder="Enter your email",
+                    placeholder="Enter your First Name",
                     size="3",
                     width="100%",
                 ),
@@ -74,7 +74,7 @@ def signup_default() -> rx.Component:
                 ),
                 rx.input(
                     id="user_last_name_signup",
-                    placeholder="Enter your email",
+                    placeholder="Enter your Last Name",
                     size="3",
                     width="100%",
                 ),
@@ -110,7 +110,7 @@ def signup_default() -> rx.Component:
                 ),
                 rx.input(
                     id="user_password_signup",
-                    placeholder="Enter your password",
+                    placeholder="Create a strong password",
                     type="password",
                     size="3",
                     width="100%",
@@ -138,7 +138,7 @@ def signup_default() -> rx.Component:
                 spacing="2",
                 width="100%",
             ),
-            rx.button("Register", size="3", width="100%", on_click=rx.redirect("/")),
+            rx.button("Create Account", size="3", width="100%", on_click=rx.redirect("/")),
             rx.center(
                 rx.text("Already registered?", size="3"),
                 rx.link("Sign in", href="/", size="3"),

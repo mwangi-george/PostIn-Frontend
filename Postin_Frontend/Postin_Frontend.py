@@ -3,7 +3,7 @@
 import reflex as rx
 
 from rxconfig import config
-from Postin_Frontend.auth import signup_default, login_default
+from Postin_Frontend.auth import signup_default, login_default, navbar_user
 
 
 class State(rx.State):
@@ -15,7 +15,8 @@ class State(rx.State):
 def index() -> rx.Component:
     # Welcome Page (Index)
     return rx.container(
-        rx.color_mode.button(position="top-right"),
+        rx.color_mode.button(position="bottom-left"),
+        rx.button("Logout", size="3", width="20%", on_click=rx.redirect("/")),
         rx.vstack(
             rx.heading("Welcome to Reflex!", size="9"),
             rx.text(
@@ -46,6 +47,7 @@ app = rx.App(
         accent_color="crimson"
     )
 )
+app.add_page(navbar_user)
 app.add_page(login_default)
 app.add_page(signup_default)
 app.add_page(index)
